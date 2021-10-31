@@ -41,11 +41,6 @@ app.get("/logout", auth, async (req, res) => {
     try {
         console.log(req.user);
         
-        // for single log out
-        // req.user.tokens = req.user.tokens.filter((currElement) => {
-        //     return currElement.token === req.token
-        // })
-
         // log out all devices
         req.user.tokens = [];
 
